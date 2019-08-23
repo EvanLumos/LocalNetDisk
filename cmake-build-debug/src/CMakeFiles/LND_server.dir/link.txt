@@ -1,1 +1,0 @@
-g++  -O0   CMakeFiles/LND_server.dir/LND_server.cpp.o  -o ../../bin/LND_server  -L/home/raopei/Documents/myProject/LocalNetDisk/lib -Wl,-rpath,/home/raopei/Documents/myProject/LocalNetDisk/lib ../../lib/libmuduo_base.a ../../lib/libmuduo_net.a ../../lib/libmuduo_base.a -lpthread -lrt 
