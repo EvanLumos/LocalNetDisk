@@ -38,22 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
+  # Include the install script for each subdirectory.
   include("/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/base/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/net/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/client/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/server/cmake_install.cmake")
+
 endif()
 

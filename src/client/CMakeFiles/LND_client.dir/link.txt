@@ -1,1 +1,0 @@
-g++  -O0   CMakeFiles/LND_client.dir/LND_client.cpp.o  -o ../../bin/LND_client  -L/home/raopei/Documents/myProject/LocalNetDisk/lib -Wl,-rpath,/home/raopei/Documents/myProject/LocalNetDisk/lib ../base/libmuduo_base.a ../net/libmuduo_net.a ../base/libmuduo_base.a -lpthread -lrt 

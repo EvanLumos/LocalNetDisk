@@ -1,14 +1,5 @@
-/snap/clion/82/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/raopei/Documents/myProject/LocalNetDisk
--- The CXX compiler identification is GNU 7.4.0
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+/home/raopei/Downloads/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/raopei/Documents/myProject/LocalNetDisk
 -- CXX_FLAGS =  -O0
--- Looking for accept4
--- Looking for accept4 - found
 -- Boost  found.
 -- Boost  found.
 -- Configuring done

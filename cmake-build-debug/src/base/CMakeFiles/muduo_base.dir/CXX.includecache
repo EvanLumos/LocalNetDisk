@@ -60,21 +60,11 @@ boost/circular_buffer.hpp
 assert.h
 -
 
-/home/raopei/Documents/myProject/LocalNetDisk/src/base/Condition.cc
-Condition.h
-/home/raopei/Documents/myProject/LocalNetDisk/src/base/Condition.h
-errno.h
--
-
 /home/raopei/Documents/myProject/LocalNetDisk/src/base/Condition.h
 Mutex.h
 /home/raopei/Documents/myProject/LocalNetDisk/src/base/Mutex.h
 pthread.h
 -
-
-/home/raopei/Documents/myProject/LocalNetDisk/src/base/CountDownLatch.cc
-CountDownLatch.h
-/home/raopei/Documents/myProject/LocalNetDisk/src/base/CountDownLatch.h
 
 /home/raopei/Documents/myProject/LocalNetDisk/src/base/CountDownLatch.h
 Condition.h
