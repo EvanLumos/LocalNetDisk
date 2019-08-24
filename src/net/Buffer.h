@@ -284,6 +284,14 @@ class Buffer : public muduo::copyable
   }
 
   ///
+  /// Get current buff size
+  ///
+  ///
+  size_t getSize(){
+      return buffer_.size();
+  }
+
+  ///
   /// Peek int64_t from network endian
   ///
   /// Require: buf->readableBytes() >= sizeof(int64_t)
