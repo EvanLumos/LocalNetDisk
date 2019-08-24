@@ -36,6 +36,7 @@ void onConnection(const TcpConnectionPtr& conn)
             char buf[kBufSize];
             size_t nread = ::fread(buf, 1, sizeof buf, fp);
             conn->send(buf, static_cast<int>(nread));
+            LOG_INFO<< "------READ--------";
         }
         else
         {

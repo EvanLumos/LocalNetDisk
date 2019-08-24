@@ -98,11 +98,14 @@ private:
                    muduo::net::Buffer* buf,
                    muduo::Timestamp receiveTime)
     {
-        MutexLockGuard guard(mutex_);
+        //MutexLockGuard guard(mutex1_);
         //LOG_INFO << "Start to download "<<"filename_";
         //int count = 1;
         std::fstream fs;
         fs.open(filename_,std::fstream::in|std::fstream::binary|std::fstream::app);
+        if(!fs.is_open())
+            return;
+
         while (buf->readableBytes() > 0) // kHeaderLen == 0
         {
             auto len = buf->readableBytes();
@@ -111,6 +114,13 @@ private:
             buf->retrieve(len);
         }
         fs.close();
+//        if(oldValue == totalBytes_){
+//            LOG_INFO << "Received "<< getTotalBytes() << " bytes.";
+//            LOG_INFO << "Download finished !!!";
+//            MutexLockGuard guard1(mutex_);
+//            connection_ ->disconnected();
+//        }
+
     }
 
     void onStringMessage(const TcpConnectionPtr&,
@@ -119,8 +129,8 @@ private:
     {
         printf("<<< %s\n", message.c_str());
     }
-
-    unsigned long long totalBytes_ = 0;
+    MutexLock mutex1_;
+    unsigned long long totalBytes_ GUARDED_BY(mutex1_);
     bool finished_ = false;
     string filename_;
     TcpClient client_;
@@ -143,12 +153,8 @@ int main(int argc, char* argv[])
         client.setFilename(filename);
         LOG_INFO << "Download started !!!";
         //client.write(filename); // 发送文件名
-
-        while(client.getTotalBytes() < 2606450){
-            LOG_INFO << "Receiving data .... ";
-        }
-        LOG_INFO << "Received "<< client.getTotalBytes() << " bytes.";
-        LOG_INFO << "Download finished !!!";
+       // LOG_INFO << "Received "<< client.getTotalBytes() << " bytes.";
+       // LOG_INFO << "Download finished !!!";
         client.disconnect();
         CurrentThread::sleepUsec(1000*1000);  // wait for disconnect, see ace/logging/client.cc
     }
