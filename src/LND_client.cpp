@@ -19,6 +19,8 @@ using namespace muduo::net;
 
 typedef std::shared_ptr<FILE> FilePtr;
 const int kBufSize = 64*1024;
+const std::string hostIp = "127.0.0.1";
+const uint16_t port = 8080;
 
 bool download_finished = false;
 MutexLock mylock;
@@ -142,14 +144,15 @@ private:
 int main(int argc, char* argv[])
 {
     LOG_INFO << "pid = " << getpid();
-    if (argc > 2)
+    if (argc > 1)
     {
+
         EventLoopThread loopThread;  //新建线程
-        uint16_t port = 8080;//static_cast<uint16_t>(atoi(argv[2]));
-        InetAddress serverAddr(argv[1], port);
+        //static_cast<uint16_t>(atoi(argv[2]));
+        InetAddress serverAddr(hostIp, port);
         LNDClient client(loopThread.startLoop(), serverAddr);
         client.connect();//创建socket并connect
-        std::string filename(argv[2]);
+        std::string filename(argv[1]);
         client.setFilename(filename);
         LOG_INFO << "Download started !!!";
         //client.write(filename); // 发送文件名
@@ -160,7 +163,7 @@ int main(int argc, char* argv[])
     }
     else
     {
-        printf("Usage: %s host_ip filename\n", argv[0]);
+        printf("Usage: %s filename\n", argv[0]);
     }
 
 }
