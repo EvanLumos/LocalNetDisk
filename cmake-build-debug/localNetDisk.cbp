@@ -27,11 +27,31 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="install">
+				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="install/local">
 				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -57,76 +77,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="LND_client">
-				<Option output="/home/raopei/Documents/myProject/LocalNetDisk/bin/LND_client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
-					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 LND_client"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="LND_client/fast">
-				<Option output="/home/raopei/Documents/myProject/LocalNetDisk/bin/LND_client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
-					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 LND_client/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="LND_server">
 				<Option output="/home/raopei/Documents/myProject/LocalNetDisk/bin/LND_server" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/bin"/>
@@ -137,11 +87,11 @@
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -162,16 +112,66 @@
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 LND_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LND_client">
+				<Option output="/home/raopei/Documents/myProject/LocalNetDisk/bin/LND_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
+					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 LND_client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LND_client/fast">
+				<Option output="/home/raopei/Documents/myProject/LocalNetDisk/bin/LND_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raopei/Documents/myProject/LocalNetDisk/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
+					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/net"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 LND_client/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raopei/Documents/myProject/LocalNetDisk/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
@@ -184,12 +184,12 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -207,12 +207,12 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -231,12 +231,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -255,12 +255,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/raopei/Documents/myProject/LocalNetDisk/src/base"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -273,8 +273,8 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/raopei/Documents/myProject/LocalNetDisk/src/LND_client.cpp">
-			<Option target="LND_client"/>
 			<Option target="LND_server"/>
+			<Option target="LND_client"/>
 		</Unit>
 		<Unit filename="/home/raopei/Documents/myProject/LocalNetDisk/src/base/AsyncLogging.cc">
 			<Option target="muduo_base"/>

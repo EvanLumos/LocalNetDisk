@@ -18,12 +18,11 @@ using namespace muduo;
 using namespace muduo::net;
 
 typedef std::shared_ptr<FILE> FilePtr;
-const int kBufSize = 64*1024;
+//const int kBufSize = 64*1024;
 const std::string hostIp = "127.0.0.1";
 const uint16_t port = 8080;
 
-bool download_finished = false;
-MutexLock mylock;
+//
 
 class LNDClient : noncopyable
 {
